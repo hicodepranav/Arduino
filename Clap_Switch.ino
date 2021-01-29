@@ -8,7 +8,7 @@ void setup()
 {
   pinMode(Sensor, INPUT);
   pinMode(13,OUTPUT);
-  digitalWrite(13,HIGH);
+  digitalWrite(13,HIGH); //initially relay remains off
 }
 void loop() 
 {
@@ -33,12 +33,12 @@ void loop()
  if (!status_lights)
 {
  status_lights = true;
- digitalWrite(13, LOW);
+ digitalWrite(13, LOW); //relay turns ON
 }
  else if (status_lights)
 {
  status_lights = false;
- digitalWrite(13, HIGH);
+ digitalWrite(13, HIGH); //relay turns OFF
 }
 }
  clap = 0;
