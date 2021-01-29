@@ -25,12 +25,12 @@ void loop() {
   delay(100);
   if(distance<10&&p_distance>10)
   {
-    digitalWrite(10,LOW);
+    digitalWrite(10,LOW); //relay turns ON
     delay(1000);
   }
   else
   {
-    digitalWrite(10,HIGH);
+    digitalWrite(10,HIGH); //relay turns OFF
   }
   p_distance=distance;
 }
